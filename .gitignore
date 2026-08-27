@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.pnpm-store/
+.playwright-cli/
+tmp/
+output/
+.DS_Store
+
+# Local source materials; the website uses curated copies in public/assets.
+/*.docx
+/*.pdf
+/*.jpg
+/*.jpeg
+/*.JPG
+/*.png
+/design/
+
+# Unused local image library; keep only assets rendered by the live page public.
+/public/assets/Human Amber 01.jpeg
+/public/assets/Kids & Robotics 01.jpg
+/public/assets/Kids & Robotics 02.jpg
+/public/assets/World On My Plate 02.JPG
+/public/assets/World On My Plate 02.jpeg
