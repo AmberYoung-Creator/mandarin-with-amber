@@ -52,7 +52,8 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; }
 .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; padding: 14px 21px; font-size: .92rem; font-weight: 720; line-height: 1.2; transition: transform .2s ease, background-color .2s ease; }
 .button:hover { transform: translateY(-2px); }
-.button-primary { background: var(--yellow); }
+.button-primary { background: var(--yellow); border-radius: 999px; }
+.primary-nav a:last-child { border-radius: 999px; }
 .button-primary:hover { background: #fd803f; }
 .button-secondary { min-height: auto; padding: 8px 0; border-bottom: 2px solid var(--blue); color: var(--blue-dark); }
 .button svg { width: 18px; height: 18px; margin-left: 7px; }
