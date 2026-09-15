@@ -109,6 +109,7 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .wechat-copy { width: 100%; min-height: 44px; margin-top: 14px; padding: 10px; border: 1px solid var(--blue-dark); background: #fff; color: var(--blue-dark); font-size: .85rem; font-weight: 650; }
 .wechat-copy:hover { background: var(--blue-pale); }
 .copy-status { min-height: 2.8em; margin: 8px 0 0; font-size: .78rem; line-height: 1.4; color: var(--muted); }
+.step-list span, .contact .section-label, .contact-email { color: var(--ink); }
 
 .footer { border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1fr 1.7fr 1fr; align-items: center; gap: 28px; width: min(1280px, calc(100% - 56px)); min-height: 126px; margin: 0 auto; }
