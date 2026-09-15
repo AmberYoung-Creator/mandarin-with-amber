@@ -104,7 +104,7 @@ export function HomePage() {
 
       <section className="experience section" id="experience" aria-labelledby="experience-title">
         <div className="experience-media">
-          <img src={asset('Human Amber 02.jpeg')} alt="Amber in Shenzhen." />
+          <img src={asset('Amber工作照.jpg')} alt="Amber wearing a black blazer." />
         </div>
         <div className="experience-content">
           <p className="section-label">Learning experience</p>
