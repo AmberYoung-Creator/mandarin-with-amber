@@ -11,6 +11,7 @@
   --ink: #202124;
   --muted: #5d6268;
   --line: #dce3e7;
+  --radius: 24px;
 }
 
 * { box-sizing: border-box; }
@@ -82,7 +83,7 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .course-row li::before { position: absolute; top: .65em; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); content: ""; }
 
 .path { padding: 108px 0 124px; border-top: 1px solid var(--line); }
-.step-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; padding: 0; margin: 58px 0 0; list-style: none; }
+.step-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 0; margin: 58px 0 0; list-style: none; }
 .step-list li { min-height: 250px; padding: 32px; border-left: 1px solid var(--line); background: var(--blue-pale); }
 .step-list li:last-child { border-right: 1px solid var(--line); }
 .step-list span { display: block; margin-bottom: 48px; color: var(--blue-dark); font-size: .8rem; font-weight: 750; }
@@ -111,6 +112,9 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .wechat-copy:hover { background: var(--blue-pale); }
 .copy-status { min-height: 2.8em; margin: 8px 0 0; font-size: .78rem; line-height: 1.4; color: var(--muted); }
 .step-list span, .contact .section-label, .contact-email { color: var(--ink); }
+.hero-media, .about-gallery img, .experience-media img,
+.step-list li, .contact, .wechat-contact { border-radius: var(--radius); }
+.wechat-contact img, .wechat-copy { border-radius: 12px; }
 
 .footer { border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1fr 1.7fr 1fr; align-items: center; gap: 28px; width: min(1280px, calc(100% - 56px)); min-height: 126px; margin: 0 auto; }
@@ -123,7 +127,7 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
   .site-header { height: 72px; }
   [id] { scroll-margin-top: 80px; }
   .menu-toggle { display: inline-flex; }
-  .primary-nav { display: none; position: absolute; top: 72px; right: 20px; left: 20px; padding: 14px 18px; border: 1px solid var(--ink); background: #fff; box-shadow: 0 16px 34px rgba(0, 0, 0, .1); }
+  .primary-nav { display: none; position: absolute; top: 72px; right: 20px; left: 20px; padding: 14px 18px; border: 1px solid var(--ink); border-radius: var(--radius); background: #fff; box-shadow: 0 16px 34px rgba(0, 0, 0, .1); }
   .primary-nav.is-open { display: grid; gap: 0; }
   .primary-nav a, .primary-nav a:last-child { padding: 14px 4px; border: 0; background: transparent; }
   .hero { grid-template-columns: 1fr; gap: 42px; min-height: auto; padding: 44px 0 84px; }
