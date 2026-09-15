@@ -1,9 +1,20 @@
+import { useState } from 'react'
 import { ArrowUpRight } from '../components/Icon'
 import { courseSteps, courses, experiencePoints } from '../data/landingPageData'
 
 const asset = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`
 
 export function HomePage() {
+  const [copyStatus, setCopyStatus] = useState('')
+  const copyWeChatId = async () => {
+    try {
+      await navigator.clipboard.writeText('AmberYoung_Co')
+      setCopyStatus('Copied! Paste it into WeChat search.')
+    } catch {
+      setCopyStatus('Please select and copy AmberYoung_Co above.')
+    }
+  }
+
   return (
     <main>
       <section className="hero section" aria-labelledby="hero-title">
@@ -17,6 +28,7 @@ export function HomePage() {
             I’m a Chinese teacher, course designer, and your guide to the Mandarin-speaking world.
             Together, we’ll build practical Chinese for your daily life, work, and goals.
           </p>
+          <p className="hero-location">Based in Shenzhen · Online &amp; in-person lessons</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#contact">Book a trial lesson</a>
             <a className="button button-secondary" href="#courses">Explore courses <ArrowUpRight /></a>
@@ -44,9 +56,8 @@ export function HomePage() {
           </ul>
         </div>
         <div className="about-gallery" aria-label="Amber teaching international learners">
-          <img className="about-gallery-main" src={asset('教学合照.jpeg')} alt="Amber with international students in a classroom." loading="lazy" />
-          <img src={asset('Amber工作照.jpg')} alt="Amber teaching a Chinese class." loading="lazy" />
-          <img src={asset('Kids & Robotics 03.jpg')} alt="Amber supporting learners during a community activity." loading="lazy" />
+          <img src={asset('teaching-group-01.jpeg')} alt="Amber taking a group photo with learners seated in a classroom." width="1024" height="768" loading="lazy" />
+          <img src={asset('teaching-group-02.jpg')} alt="Amber and learners posing together in a PHBS classroom." width="4032" height="3024" loading="lazy" />
         </div>
       </section>
 
@@ -117,6 +128,7 @@ export function HomePage() {
             We’ll identify your current level, talk about what you want to use Chinese for, and shape a
             personalized course plan around your goals.
           </p>
+          <p>Email me or add me on WeChat. Tell me your current level and what you’d like to use Chinese for.</p>
           <a
             className="button button-primary contact-action"
             href="mailto:amberyoung150129@gmail.com?subject=Mandarin%20Trial%20Lesson"
@@ -131,6 +143,8 @@ export function HomePage() {
             <strong>WeChat</strong>
             <span>AmberYoung_Co</span>
           </div>
+          <button type="button" className="wechat-copy" onClick={copyWeChatId}>Copy WeChat ID</button>
+          <p className="copy-status" role="status">{copyStatus}</p>
         </div>
       </section>
     </main>

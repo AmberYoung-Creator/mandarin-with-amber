@@ -48,6 +48,7 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .intro-name { margin-bottom: 18px; font-size: 1.22rem; font-weight: 700; }
 .hero h1 { max-width: 650px; margin-bottom: 25px; font-size: clamp(3.1rem, 5.2vw, 5.3rem); line-height: .97; }
 .hero-copy { max-width: 590px; margin-bottom: 32px; color: var(--muted); font-size: clamp(1.02rem, 1.25vw, 1.17rem); line-height: 1.7; }
+.hero-location { margin: -10px 0 28px; color: var(--muted); font-size: .9rem; line-height: 1.6; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; }
 .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; padding: 14px 21px; font-size: .92rem; font-weight: 720; line-height: 1.2; transition: transform .2s ease, background-color .2s ease; }
 .button:hover { transform: translateY(-2px); }
@@ -63,9 +64,8 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .proof-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; padding: 0; margin: 30px 0 0; list-style: none; }
 .proof-points li { position: relative; padding-left: 17px; font-size: .9rem; line-height: 1.45; }
 .proof-points li::before { position: absolute; top: .52em; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); content: ""; }
-.about-gallery { display: grid; grid-template-columns: 1.35fr .9fr; grid-template-rows: 1fr 1fr; gap: 12px; min-height: 430px; }
-.about-gallery img { width: 100%; height: 100%; object-fit: cover; }
-.about-gallery-main { grid-row: 1 / span 2; }
+.about-gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.about-gallery img { width: 100%; height: auto; }
 
 .courses { padding: 116px 0; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 48px; }
@@ -105,7 +105,10 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .wechat-contact { padding: 12px; background: #fff; }
 .wechat-contact img { width: 100%; aspect-ratio: 888 / 1191; object-fit: cover; }
 .wechat-contact div { display: flex; justify-content: space-between; gap: 12px; padding: 12px 4px 2px; font-size: .82rem; }
-.wechat-contact span { color: var(--muted); }
+.wechat-contact span { color: var(--muted); user-select: all; }
+.wechat-copy { width: 100%; min-height: 44px; margin-top: 14px; padding: 10px; border: 1px solid var(--blue-dark); background: #fff; color: var(--blue-dark); font-size: .85rem; font-weight: 650; }
+.wechat-copy:hover { background: var(--blue-pale); }
+.copy-status { min-height: 2.8em; margin: 8px 0 0; font-size: .78rem; line-height: 1.4; color: var(--muted); }
 
 .footer { border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1fr 1.7fr 1fr; align-items: center; gap: 28px; width: min(1280px, calc(100% - 56px)); min-height: 126px; margin: 0 auto; }
@@ -126,7 +129,6 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
   .hero h1 { font-size: clamp(3rem, 9vw, 4.8rem); }
   .about { grid-template-columns: 1fr; gap: 48px; padding: 90px 0; }
   .about-copy { max-width: none; }
-  .about-gallery { min-height: 400px; }
   .courses, .path { padding: 88px 0; }
   .section-heading { display: block; }
   .section-heading > p { margin: 22px 0 0; }
@@ -149,8 +151,6 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
   .hero { padding-top: 28px; }
   .hero h1 { font-size: clamp(2.65rem, 12vw, 3.35rem); line-height: 1; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
-  .about-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 130px; min-height: auto; }
-  .about-gallery-main { grid-column: 1 / -1; grid-row: 1; }
   .proof-points { grid-template-columns: 1fr; }
   .course-row { grid-template-columns: 1fr; gap: 14px; padding: 30px 0; }
   .course-row ul { grid-column: auto; margin-top: 8px; }
